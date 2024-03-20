@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRRC4TNR6V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CE4NX2HSBZ');
+    </script> -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Projects</title>
+
+    <meta name="author" content="Tzanis Anevlavis">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+
+<body>
+    <table
+        style="width:100%;max-width:950px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr style="padding:0px">
+                <td style="padding:0px">
+                    <!-- <p class="name" style="text-align: center;">
+                        Tzanis Anevlavis
+                    </p> -->
+                    <h1 class="name" style="text-align: center;">
+                        Projects
+                    </h1>
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <p style="text-align:justify">
+                                        During the course of both my studies and professional career, I have been fortunate to work on very diverse topics. This page contains a summary of some projects that I have been recently working on.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table 
+                        rules=rows
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:50%;vertical-align:middle">
+                                    <h3>Safety-critical control via robust controlled invariant sets</h3>
+                                    <a href="https://github.com/tzanis-anevlavis/cis2m">Github Repo</a>
+                                    /
+                                    <a href="https://tinyurl.com/drone-supervision-cis">Video</a>
+                                    <p style="text-align:justify">
+                                        A safety enforcing controller should indefinitely keep the state of the system
+                                        within a set of safe states. One way to achieve this is by initializing the
+                                        state of the system inside a (Robust) Controlled Invariant Sets (RCIS) within
+                                        the set of safe states as starting any trajectory in an RCIS allows one to force
+                                        it to remain there.
+                                        <br>
+                                        <br>
+                                        A novel algorithm is proposed to compute an <em>implicit representation</em> of
+                                        an RCIS in the space of states and control inputs in <em>closed-form</em>.
+                                        This representation can be readily used for solving safety-critical control
+                                        problems, such as the supervisory control problem, where
+                                        a nominal input is corrected if it is considered unsafe. The closed-form
+                                        expression allows the computation of different implicit RCISs online, e.g., for
+                                        dynamic settings where the safe set changes.
+                                        Alternatively, if the safe set is known a-priori and not changing, the implicit
+                                        representation can be projected (offline) onto the state space to obtain an
+                                        RCIS.
+                                        <br>
+                                        <br>
+                                        In practice the use of the implicit representation is only limited by the size
+                                        of an optimization problem one affords to solve.
+                                        <br>
+                                        I also developed a MATLAB and C++ library found <a
+                                            href="https://github.com/tzanis-anevlavis/cis2m">this repo</a>, which was
+                                        tested on the obstacle-avoidance problem for drones.
+                                    </p>
+                                </td>
+                                <td style="width:50%;vertical-align:middle">
+                                    <img src="images/safety_supervisor.gif" alt="cis_cover" width="100%"
+                                        style="border-style: none">
+                                    <p>Relevant publications:
+                                        <ul>
+                                            <li>
+                                                <strong>T. Anevlavis</strong>, Z. Liu, N. Ozay, and P. Tabuada, 
+                                                <em><a href="https://ieeexplore.ieee.org/document/10328804">Controlled 
+                                                    invariant sets: implicit closed-form representations and applications</a>,
+                                                </em> IEEE Transactions on Automatic Control.
+                                            </li>
+                                            <li>
+                                                Z. Liu, <strong>T. Anevlavis</strong>, N. Ozay, and P. Tabuada, 
+                                                <em><a href="https://ieeexplore.ieee.org/document/9683574">Automaton-based
+                                                        implicit controlled invariant set computation for
+                                                        discrete-time linear systems</a>,”</em> In 2021 IEEE 60th Conference
+                                                on Decision and Control (CDC).
+                                            </li>
+                                            <li>
+                                                L. Pannocchi, <strong>T. Anevlavis</strong>, and P. Tabuada, <em><a
+                                                        href="https://ieeexplore.ieee.org/document/9636485">Trust your
+                                                        supervisor: quadrotor obstacle avoidance using controlled invariant
+                                                        sets</a>,”</em>
+                                                In 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems
+                                                (IROS).
+                                            </li>
+                                            <li>
+                                                <strong>T. Anevlavis</strong>, Z. Liu, N. Ozay, and P. Tabuada, <em><a
+                                                        href="https://ieeexplore.ieee.org/document/9483217">An
+                                                        enhanced
+                                                        hierarchy for (robust) controlled invariance</a>,”</em> In 2021
+                                                American Control Conference (ACC).
+                                            </li>
+                                            <li>
+                                                <strong>T. Anevlavis</strong> and P. Tabuada, <em><a
+                                                        href="https://dl.acm.org/doi/abs/10.1145/3365365.3382205">A simple
+                                                        hierarchy for
+                                                        computing controlled invariant sets</a>,”</em> In Proceedings of the
+                                                23rd
+                                                ACM International Conference on Hybrid Systems: Computation and Control
+                                                (HSCC ’20).
+                                            </li>
+                                            <li>
+                                                <strong>T. Anevlavis</strong> and P. Tabuada, <em><a
+                                                        href="https://ieeexplore.ieee.org/document/9029610">Computing
+                                                        controlled
+                                                        invariant sets in two moves</a>,”</em> In 2019 IEEE 58th Conference
+                                                on
+                                                Decision and Control (CDC).
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:20px;width:25%;vertical-align:middle">
+                                    <img src="images/rltl_truth_values.png" alt="rltl truth values" width="400"
+                                        style="border-style: none">
+                                    <p>Relevant publications:
+                                        <ul>
+                                            <li>
+                                                <strong>T. Anevlavis</strong>, M. Philippe, D. Neider, and P. Tabuada,
+                                                <em><a href="https://dl.acm.org/doi/abs/10.1145/3491216">Being correct is
+                                                        not enough: efficient verification using robust linear
+                                                        temporal logic</a>,”</em> ACM Transactions on Computational Logic,
+                                                2022.
+                                            </li>
+                                            <li>
+                                                <strong>T. Anevlavis</strong>, D. Neider, M. Philippe, and P. Tabuada,
+                                                <em><a href="https://dl.acm.org/doi/abs/10.1145/3302504.3311812">Evrostos:
+                                                        The rLTL Verifier</a>,”</em> In Proceedings of the 22nd ACM
+                                                International Conference on Hybrid Systems: Computation and Control (HSCC
+                                                ’19).
+                                            </li>
+                                            <li>
+                                                <strong>T. Anevlavis</strong>, M. Philippe, D. Neider, and P. Tabuada,
+                                                <em><a href="https://ieeexplore.ieee.org/document/8619014">Verifying rLTL
+                                                        formulas: now faster than ever before!</a>,”</em> In 2018
+                                                IEEE Conference on Decision and Control (CDC).
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </td>
+                                <td width="75%" valign="middle">
+                                    <h3>rLTL: Formally reasoning about correctness and robustness in verification</h3>
+                                    <a href="https://github.com/tzanis-anevlavis/evrostos">Github Repo</a>
+                                    <p></p>
+                                    <p style="text-align:justify">
+                                        While most approaches in formal methods address system correctness, ensuring
+                                        robustness has remained a challenge. The logic rLTL provides a means to formally
+                                        reason about both correctness and robustness in system design. As a multi-valued
+                                        logic it augments the classic LTL in terms of expressiveness, the ability to
+                                        describe robustness, and the fine-grained information it brings to the process
+                                        of system verification.
+                                        <br>
+                                        <br>
+                                        My work was focused on making verification using rLTL accessible, so that the
+                                        advantages of this logic can be practical. First, I identified a large fragment
+                                        of rLTL for which the complexity of verifying an rLTL formula <em>&phi;</em> is
+                                        at most <em>O(3^|&phi;|)</em>, where <em>|&phi;|</em> is the length of
+                                        <em>&phi;</em>. This result improves the previously known bound of
+                                        <em>O(5^|&phi;^|)</em> is closer to the LTL bound of <em>O(2^|&phi;|)</em>.
+                                        Secondly, I developed the first rLTL model-checking software, <em>Evrostos</em>,
+                                        which can be found in <a
+                                            href="https://github.com/tzanis-anevlavis/evrostos">this repo</a>.
+                                        <br>
+                                        <br>
+                                        Case studies with Evrostos show that the advantages of rLTL come at a low
+                                        computational overhead when compared to LTL verification.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <!-- <tr>
+                                <td style="padding:20px;width:25%;vertical-align:middle">
+                                    <img src="images/rltl_truth_values.png" alt="rltl truth values" width="400"
+                                        style="border-style: none">
+                                </td>
+                                <td width="75%" valign="middle">
+                                    <h3>Submodularity</h3>
+                                    <a href="https://github.com/tzanis-anevlavis/">Github Repo [TODO]</a>
+                                    <p></p>
+                                    <p style="text-align:justify">
+                                        Submodular stuff.
+                                    </p>
+                                    <p>Relevant publications:
+                                    <ol>
+                                        <li>J.Bunton, <strong>T. Anevlavis</strong>, G. Verna, C. Fragouli, and P.
+                                            Tabuada, <em><a href="https://ieeexplore.ieee.org/document/9652975">Split to
+                                                    win: near-optimal sensor network synthesis via
+                                                    path-greedy subproblems</a>,”</em> In 2021 IEEE Military
+                                            Communications Conference (MILCOM).
+                                        </li>
+                                        <li>
+                                            <strong>T. Anevlavis</strong>, J. Bunton, A. Parayil, J. George, and P.
+                                            Tabuada,
+                                            <em><a href="https://ieeexplore.ieee.org/document/9304416">To beam or not to
+                                                    beam? Beamforming with submodularity-inspired group
+                                                    sparsity</a>,”</em> In 2020 IEEE 59th Conference on Decision and
+                                            Control (CDC).
+                                        </li>
+                                    </ol>
+                                    </p>
+                                </td>
+                            </tr> -->
+
+                            <tr>
+                                <td style="padding:20px;width:25%;vertical-align:middle">
+                                    <img src="images/opencv_autonomous_vehicles.png" alt="rltl truth values" width="400"
+                                        style="border-style: none">
+                                </td>
+                                <td width="75%" valign="middle">
+                                    <h3>Computer vision for autonomous vehicles perception</h3>
+                                    <p>
+                                        Github Repos:
+                                        <a href="https://github.com/tzanis-anevlavis/opencv_autonomous_vehicles">AV Lane
+                                            Detection</a>,
+                                        <a href="https://github.com/tzanis-anevlavis/packnet-sfm">PackNet Monocular
+                                            Depth Estimation</a>
+                                    </p>
+                                    <p style="text-align:justify">
+                                        Trying to understand how one can enable an autonomous vehicle to "see", I played
+                                        around with classic computer vision algorithms for:
+                                    <ol>
+                                        <li>
+                                            Camera calibration;
+                                        </li>
+                                        <li>
+                                            Ego-lane detection;
+                                        </li>
+                                        <li>
+                                            Camera view to bird's eye view transformation.
+                                        </li>
+                                    </ol>
+                                    It is interesting to see how classic vision techniques, such as color selection,
+                                    edge detection, Hough line transformation, and homography transformation, work
+                                    sufficiently well for these tasks.
+                                    <br>
+                                    <br>
+                                    Moving to more modern approaches, during my internship at Parallel Systems, I also
+                                    evaluated different Deep Neural Networks (DNN) for monocular depth estimation on
+                                    driving datasets, and compared to classic computer vision algorithms. I explored the
+                                    features learned by each DNN and extensevely used Toyota Research Institute's (TRI)
+                                    <a href="https://arxiv.org/abs/1905.02693">PackNet: 3D Packing for Self-Supervised
+                                        Monocular Depth Estimation</a>.
+
+                                    I deployed DNNs for real-time inference onboard a moving rail vehicle using NVIDIA
+                                    DeepStream, and implemented object-specific distance estimation procedures as part
+                                    of a larger perception software.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:20px;width:25%;vertical-align:middle">
+                                    <img src="images/car_mpc.png" alt="rltl truth values" width="400"
+                                        style="border-style: none">
+                                </td>
+                                <td width="75%" valign="middle">
+                                    <h3>Modules for self driving cars </h3>
+                                    <p>
+                                        Github Repos: <a
+                                            href="https://github.com/tzanis-anevlavis/CarND-Extended-Kalman-Filter-Project">
+                                            EKF</a>, <a
+                                            href="https://github.com/tzanis-anevlavis/CarND-Path-Planning-Project">
+                                            Path-Planning</a>, <a
+                                            href="https://github.com/tzanis-anevlavis/CarND-MPC-Project"> MPC</a>
+                                        <br>
+                                        (Udacity's Self-Driving Car Engineer Nanodegree program).
+                                    </p>
+                                    <p style="text-align:justify">
+                                        While on the topic of autonomous vehicles, I have experience applying control
+                                        theoretic approaches towards creating controllers for self-driving cars.
+                                        More specifically I implemented:
+                                    <ol>
+                                        <li>
+                                            An Extended Kalman Filter module to estimate the state of moving cars based
+                                            on noisy LiDAR and RADAR data.
+                                        </li>
+                                        <li>
+                                            A path planning module for the car to safely navigate in a highway with
+                                            other traffic. The planner takes into account a target velocity, road speed
+                                            limits, and state/actuation constraints. Sensor fusion measurements are used
+                                            to predict the evolution of the surrounding environment. The planner outputs
+                                            waypoints for the car to follow.
+                                        </li>
+                                        <li>
+                                            A non-linear model predictive controller for path following. The cost
+                                            function was designed to represent a trade-off between accuracy in path
+                                            following, fuel efficiency, and driving comfort. The above modules were all
+                                            implemented in C++ and validated in a realistic highway simulator from
+                                            Unity.
+                                        </li>
+                                    </ol>
+
+                                    </p>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    <p style="text-align:left">
+                        <a href="https://www.tzanis-anevlavis.github.io/index.html">
+                            Back
+                        </a>
+                    </p>
+                </td>
+            </tr>
+    </table>
+</body>
+
+</html>
